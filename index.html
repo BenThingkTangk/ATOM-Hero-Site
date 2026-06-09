@@ -1,0 +1,1420 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nirmata Holdings | ATOM Investor Experience</title>
+  <meta
+    name="description"
+    content="Nirmata Holdings — ATOM investor experience. Revenue AI OS. Nervous system and spine. Sovereign inference. Evidence OS. Ethical execution."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700,900&f[]=cabinet-grotesk@400,500,700,800&display=swap" rel="stylesheet">
+
+  <style>
+    :root, [data-theme="light"] {
+      --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+      --text-sm: clamp(0.875rem, 0.8rem + 0.35vw, 1rem);
+      --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+      --text-lg: clamp(1.125rem, 1rem + 0.75vw, 1.5rem);
+      --text-xl: clamp(1.5rem, 1.2rem + 1.25vw, 2.25rem);
+      --text-2xl: clamp(2rem, 1.2rem + 2.5vw, 3.5rem);
+      --text-3xl: clamp(2.5rem, 1rem + 4vw, 5rem);
+      --text-hero: clamp(3.25rem, 0.5rem + 7vw, 8rem);
+
+      --space-1: .25rem;
+      --space-2: .5rem;
+      --space-3: .75rem;
+      --space-4: 1rem;
+      --space-5: 1.25rem;
+      --space-6: 1.5rem;
+      --space-8: 2rem;
+      --space-10: 2.5rem;
+      --space-12: 3rem;
+      --space-16: 4rem;
+      --space-20: 5rem;
+      --space-24: 6rem;
+      --space-32: 8rem;
+
+      --color-bg: #f7f6f2;
+      --color-surface: #f9f8f5;
+      --color-surface-2: #fbfbf9;
+      --color-surface-offset: #f3f0ec;
+      --color-surface-offset-2: #edeae5;
+      --color-surface-dynamic: #e6e4df;
+      --color-divider: #dcd9d5;
+      --color-border: #d4d1ca;
+      --color-text: #28251d;
+      --color-text-muted: #6c6a64;
+      --color-text-faint: #a7a49d;
+      --color-text-inverse: #f9f8f4;
+      --color-primary: #0db3a6;
+      --color-primary-hover: #088980;
+      --color-primary-active: #06605b;
+      --color-primary-highlight: #d2f3ef;
+      --color-gold: #d7aa2d;
+      --color-orange: #e5790f;
+      --color-success: #4c8f2f;
+      --color-blue: #1f73b7;
+      --color-purple: #7458d8;
+      --radius-sm: .375rem;
+      --radius-md: .75rem;
+      --radius-lg: 1rem;
+      --radius-xl: 1.5rem;
+      --radius-full: 9999px;
+      --shadow-sm: 0 1px 2px oklch(0.2 0.01 80 / 0.06);
+      --shadow-md: 0 8px 24px oklch(0.2 0.01 80 / 0.08);
+      --shadow-lg: 0 22px 60px oklch(0.2 0.01 80 / 0.14);
+      --content-default: 1180px;
+      --content-wide: 1360px;
+      --font-display: "Cabinet Grotesk", Inter, sans-serif;
+      --font-body: "Satoshi", Inter, sans-serif;
+      --transition-interactive: 180ms cubic-bezier(.16,1,.3,1);
+    }
+
+    [data-theme="dark"] {
+      --color-bg: #060b0d;
+      --color-surface: #0d1418;
+      --color-surface-2: #111a20;
+      --color-surface-offset: #10171c;
+      --color-surface-offset-2: #172127;
+      --color-surface-dynamic: #1d2c34;
+      --color-divider: rgba(255,255,255,.07);
+      --color-border: rgba(182, 244, 238, .12);
+      --color-text: #edf4f3;
+      --color-text-muted: #a7b6b4;
+      --color-text-faint: #6f7f7c;
+      --color-text-inverse: #091012;
+      --color-primary: #3ce6d6;
+      --color-primary-hover: #21cfbf;
+      --color-primary-active: #12a798;
+      --color-primary-highlight: rgba(60,230,214,.12);
+      --color-gold: #f5c450;
+      --color-orange: #ff9b43;
+      --color-success: #74c95f;
+      --color-blue: #63a6ff;
+      --color-purple: #a786ff;
+      --shadow-sm: 0 4px 16px rgba(0,0,0,.22);
+      --shadow-md: 0 12px 36px rgba(0,0,0,.34);
+      --shadow-lg: 0 28px 88px rgba(0,0,0,.5);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        --color-bg: #060b0d;
+        --color-surface: #0d1418;
+        --color-surface-2: #111a20;
+        --color-surface-offset: #10171c;
+        --color-surface-offset-2: #172127;
+        --color-surface-dynamic: #1d2c34;
+        --color-divider: rgba(255,255,255,.07);
+        --color-border: rgba(182, 244, 238, .12);
+        --color-text: #edf4f3;
+        --color-text-muted: #a7b6b4;
+        --color-text-faint: #6f7f7c;
+        --color-text-inverse: #091012;
+        --color-primary: #3ce6d6;
+        --color-primary-hover: #21cfbf;
+        --color-primary-active: #12a798;
+        --color-primary-highlight: rgba(60,230,214,.12);
+        --color-gold: #f5c450;
+        --color-orange: #ff9b43;
+        --color-success: #74c95f;
+        --color-blue: #63a6ff;
+        --color-purple: #a786ff;
+      }
+    }
+
+    * , *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      scroll-behavior: smooth;
+      text-size-adjust: none;
+      scroll-padding-top: 96px;
+    }
+    body {
+      min-height: 100dvh;
+      font-family: var(--font-body);
+      font-size: var(--text-base);
+      line-height: 1.6;
+      color: var(--color-text);
+      background:
+        radial-gradient(circle at 10% 10%, rgba(60,230,214,.10), transparent 28%),
+        radial-gradient(circle at 90% 20%, rgba(245,196,80,.10), transparent 25%),
+        radial-gradient(circle at 50% 85%, rgba(99,166,255,.08), transparent 22%),
+        linear-gradient(180deg, #071114 0%, #060b0d 46%, #081013 100%);
+      overflow-x: hidden;
+    }
+    img, svg { display: block; max-width: 100%; height: auto; }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; color: inherit; background: none; border: none; cursor: pointer; }
+    p { max-width: 72ch; color: var(--color-text-muted); }
+    h1, h2, h3 { font-family: var(--font-display); line-height: 1.02; letter-spacing: -.03em; }
+    :focus-visible {
+      outline: 2px solid var(--color-primary);
+      outline-offset: 4px;
+      border-radius: var(--radius-sm);
+    }
+
+    .skip-link {
+      position: absolute;
+      left: 16px;
+      top: -48px;
+      z-index: 1000;
+      background: var(--color-primary);
+      color: #041012;
+      padding: 10px 14px;
+      border-radius: 999px;
+      font-size: var(--text-sm);
+    }
+    .skip-link:focus { top: 16px; }
+
+    .shell {
+      width: min(100% - 32px, var(--content-wide));
+      margin-inline: auto;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(20px);
+      background: linear-gradient(180deg, rgba(6,11,13,.88), rgba(6,11,13,.48));
+      border-bottom: 1px solid var(--color-divider);
+    }
+    .topbar-inner {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-6);
+      width: min(100% - 32px, var(--content-wide));
+      margin-inline: auto;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      min-height: 44px;
+    }
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      color: var(--color-primary);
+      background:
+        linear-gradient(135deg, rgba(60,230,214,.16), rgba(255,255,255,.03)),
+        rgba(255,255,255,.03);
+      border: 1px solid rgba(60,230,214,.18);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.08), 0 0 0 1px rgba(255,255,255,.02);
+    }
+    .brand-copy {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .brand-kicker {
+      color: var(--color-text-faint);
+      font-size: var(--text-xs);
+      text-transform: uppercase;
+      letter-spacing: .18em;
+    }
+    .brand-title {
+      font-size: var(--text-sm);
+      font-weight: 700;
+      color: var(--color-text);
+      letter-spacing: .02em;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+    .nav a {
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+      padding: 0 14px;
+      border-radius: 999px;
+      color: var(--color-text-muted);
+      font-size: var(--text-sm);
+    }
+    .nav a:hover { color: var(--color-text); background: rgba(255,255,255,.04); }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-left: 8px;
+    }
+
+    .theme-toggle,
+    .ghost-btn,
+    .primary-btn {
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 0 16px;
+      border-radius: 999px;
+      transition: transform var(--transition-interactive), background var(--transition-interactive), border-color var(--transition-interactive), color var(--transition-interactive), box-shadow var(--transition-interactive);
+    }
+    .theme-toggle,
+    .ghost-btn {
+      border: 1px solid rgba(255,255,255,.08);
+      background: rgba(255,255,255,.03);
+      color: var(--color-text);
+    }
+    .theme-toggle:hover,
+    .ghost-btn:hover {
+      transform: translateY(-1px);
+      border-color: rgba(60,230,214,.2);
+      background: rgba(255,255,255,.06);
+    }
+    .primary-btn {
+      color: #041012;
+      font-weight: 700;
+      background: linear-gradient(135deg, var(--color-primary), #8af3ea);
+      box-shadow: 0 10px 24px rgba(60,230,214,.22);
+    }
+    .primary-btn:hover { transform: translateY(-1px) scale(1.01); }
+
+    .hero {
+      position: relative;
+      padding: clamp(88px, 10vw, 140px) 0 var(--space-20);
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.18fr) minmax(320px, .82fr);
+      gap: clamp(24px, 3vw, 40px);
+      align-items: end;
+    }
+    .hero-copy {
+      position: relative;
+      z-index: 2;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      min-height: 34px;
+      padding: 0 14px;
+      margin-bottom: var(--space-5);
+      border-radius: 999px;
+      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(60,230,214,.16);
+      color: var(--color-primary);
+      font-size: var(--text-xs);
+      text-transform: uppercase;
+      letter-spacing: .18em;
+    }
+    .eyebrow-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: currentColor;
+      box-shadow: 0 0 18px currentColor;
+    }
+
+    .hero h1 {
+      font-size: var(--text-hero);
+      max-width: 11ch;
+      margin-bottom: var(--space-6);
+      text-wrap: balance;
+    }
+    .hero h1 .muted {
+      color: color-mix(in oklab, var(--color-text) 68%, transparent);
+    }
+    .hero-lead {
+      font-size: clamp(1.1rem, 1rem + .6vw, 1.4rem);
+      max-width: 60ch;
+      color: var(--color-text);
+      margin-bottom: var(--space-8);
+    }
+    .hero-lead strong {
+      color: var(--color-primary);
+      font-weight: 700;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: var(--space-10);
+    }
+
+    .proof-strip {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0,1fr));
+      gap: 12px;
+      max-width: 920px;
+    }
+    .proof-card {
+      padding: 16px 16px 18px;
+      border-radius: 18px;
+      background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.025));
+      border: 1px solid rgba(255,255,255,.08);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.05);
+    }
+    .proof-label {
+      font-size: var(--text-xs);
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--color-text-faint);
+      margin-bottom: 6px;
+    }
+    .proof-value {
+      font-family: var(--font-display);
+      font-size: clamp(1.4rem, 1.2rem + .8vw, 2.2rem);
+      color: var(--color-text);
+    }
+    .proof-note {
+      font-size: var(--text-sm);
+      color: var(--color-text-muted);
+      margin-top: 6px;
+      max-width: 20ch;
+    }
+
+    .hero-panel {
+      position: relative;
+      border-radius: 28px;
+      padding: 22px;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.03)),
+        rgba(9, 17, 21, .74);
+      border: 1px solid rgba(255,255,255,.09);
+      box-shadow: var(--shadow-lg);
+      overflow: hidden;
+      min-height: 620px;
+    }
+
+    .hero-panel::before {
+      content: "";
+      position: absolute;
+      inset: -30% 25% auto -10%;
+      height: 260px;
+      background: radial-gradient(circle, rgba(60,230,214,.24), transparent 62%);
+      filter: blur(20px);
+      pointer-events: none;
+    }
+
+    .panel-topline {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-4);
+      margin-bottom: var(--space-6);
+    }
+    .panel-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: var(--text-xs);
+      color: var(--color-text-faint);
+      text-transform: uppercase;
+      letter-spacing: .18em;
+    }
+    .status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 34px;
+      padding: 0 12px;
+      border-radius: 999px;
+      background: rgba(60,230,214,.1);
+      color: var(--color-primary);
+      border: 1px solid rgba(60,230,214,.16);
+      font-size: var(--text-xs);
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .signal-grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 12px;
+    }
+    .signal-card,
+    .stack-card,
+    .manifesto-card,
+    .portfolio-card,
+    .ethic-card,
+    .quote-card,
+    .footer-card {
+      background: linear-gradient(180deg, rgba(255,255,255,.045), rgba(255,255,255,.02));
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 22px;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.04);
+    }
+
+    .signal-card {
+      grid-column: span 12;
+      padding: 18px;
+    }
+    .signal-card.large { grid-column: span 7; min-height: 180px; }
+    .signal-card.side { grid-column: span 5; }
+    .signal-card h3 {
+      font-size: var(--text-lg);
+      margin-bottom: 10px;
+    }
+    .signal-card p { font-size: var(--text-sm); }
+
+    .dial {
+      display: grid;
+      place-items: center;
+      width: min(100%, 240px);
+      aspect-ratio: 1 / 1;
+      margin-top: var(--space-4);
+      border-radius: 50%;
+      background:
+        radial-gradient(circle at 50% 50%, rgba(6,11,13,.95) 0 38%, transparent 39%),
+        conic-gradient(
+          from 220deg,
+          rgba(255,255,255,.07) 0deg,
+          rgba(60,230,214,.18) 90deg,
+          rgba(60,230,214,.8) 270deg,
+          rgba(245,196,80,.9) 313deg,
+          rgba(255,255,255,.08) 360deg
+        );
+      box-shadow:
+        inset 0 0 0 1px rgba(255,255,255,.08),
+        0 20px 60px rgba(0,0,0,.35);
+      position: relative;
+    }
+    .dial::after {
+      content: "";
+      position: absolute;
+      inset: 14px;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,.08);
+    }
+    .dial-center {
+      text-align: center;
+      z-index: 1;
+    }
+    .dial-center strong {
+      display: block;
+      font-family: var(--font-display);
+      font-size: clamp(2.2rem, 1.5rem + 2vw, 4rem);
+      line-height: 1;
+    }
+    .dial-center span {
+      color: var(--color-text-faint);
+      font-size: var(--text-xs);
+      text-transform: uppercase;
+      letter-spacing: .16em;
+    }
+
+    .mini-metrics {
+      display: grid;
+      gap: 10px;
+      margin-top: 14px;
+    }
+    .mini-metric {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 10px;
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(255,255,255,.06);
+      font-size: var(--text-sm);
+    }
+    .mini-metric:last-child { border-bottom: none; }
+    .mini-metric span:first-child { color: var(--color-text-muted); }
+    .mini-metric strong { color: var(--color-text); }
+
+    .section {
+      padding: clamp(64px, 8vw, 112px) 0;
+      position: relative;
+    }
+    .section-header {
+      display: grid;
+      gap: 14px;
+      margin-bottom: var(--space-10);
+      max-width: 820px;
+    }
+    .section-kicker {
+      font-size: var(--text-xs);
+      text-transform: uppercase;
+      letter-spacing: .2em;
+      color: var(--color-primary);
+    }
+    .section-title {
+      font-size: var(--text-3xl);
+    }
+    .section-sub {
+      font-size: var(--text-lg);
+      color: var(--color-text-muted);
+    }
+
+    .doctrine-grid {
+      display: grid;
+      grid-template-columns: 300px minmax(0,1fr);
+      gap: 24px;
+      align-items: start;
+    }
+    .doctrine-rail {
+      position: sticky;
+      top: 104px;
+      padding: 18px;
+      border-radius: 24px;
+      background: rgba(255,255,255,.03);
+      border: 1px solid rgba(255,255,255,.08);
+    }
+    .rail-label {
+      font-size: var(--text-xs);
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--color-text-faint);
+      margin-bottom: 12px;
+    }
+    .rail-list {
+      display: grid;
+      gap: 8px;
+      list-style: none;
+    }
+    .rail-list a {
+      min-height: 44px;
+      display: flex;
+      align-items: center;
+      padding: 12px 14px;
+      border-radius: 14px;
+      color: var(--color-text-muted);
+      font-size: var(--text-sm);
+      border: 1px solid transparent;
+    }
+    .rail-list a:hover {
+      color: var(--color-text);
+      background: rgba(255,255,255,.04);
+      border-color: rgba(60,230,214,.12);
+    }
+
+    .manifesto-stack {
+      display: grid;
+      gap: 18px;
+    }
+    .manifesto-card {
+      padding: 24px;
+      position: relative;
+      overflow: hidden;
+    }
+    .manifesto-card::after {
+      content: "";
+      position: absolute;
+      inset: 0 auto 0 0;
+      width: 2px;
+      background: linear-gradient(180deg, transparent, var(--color-primary), transparent);
+      opacity: .9;
+    }
+    .manifesto-index {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px;
+      height: 34px;
+      border-radius: 999px;
+      background: rgba(60,230,214,.1);
+      color: var(--color-primary);
+      font-size: var(--text-xs);
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+    .manifesto-card h3 {
+      font-size: clamp(1.6rem, 1.2rem + 1vw, 2.4rem);
+      margin-bottom: 12px;
+      max-width: 14ch;
+    }
+    .manifesto-card p {
+      margin-bottom: 18px;
+      max-width: 58ch;
+      color: var(--color-text-muted);
+    }
+    .quote {
+      font-family: var(--font-display);
+      font-size: clamp(1.3rem, 1rem + 1vw, 2rem);
+      line-height: 1.15;
+      letter-spacing: -.02em;
+      color: var(--color-text);
+      max-width: 26ch;
+    }
+    .manifesto-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+    .meta-chip {
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: var(--text-xs);
+      color: var(--color-text-muted);
+      border: 1px solid rgba(255,255,255,.08);
+      background: rgba(255,255,255,.03);
+    }
+
+    .moat-grid {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 24px;
+      align-items: stretch;
+    }
+    .stack-card,
+    .quote-card,
+    .ethic-card,
+    .portfolio-card,
+    .footer-card {
+      padding: 24px;
+    }
+    .stack-card h3,
+    .quote-card h3,
+    .ethic-card h3,
+    .portfolio-card h3,
+    .footer-card h3 {
+      font-size: var(--text-xl);
+      margin-bottom: 10px;
+    }
+
+    .moat-metrics {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap: 14px;
+      margin-top: 18px;
+    }
+    .moat-metric {
+      border-radius: 18px;
+      padding: 18px;
+      background: rgba(255,255,255,.03);
+      border: 1px solid rgba(255,255,255,.07);
+    }
+    .moat-metric strong {
+      display: block;
+      font-family: var(--font-display);
+      font-size: clamp(1.6rem, 1.3rem + 1vw, 2.8rem);
+      margin-bottom: 4px;
+    }
+    .moat-metric span {
+      display: block;
+      color: var(--color-text-muted);
+      font-size: var(--text-sm);
+    }
+
+    .arch-shell {
+      display: grid;
+      gap: 16px;
+      margin-top: 20px;
+    }
+    .arch-layer {
+      padding: 16px 18px;
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,.08);
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+      display: grid;
+      gap: 4px;
+      position: relative;
+      overflow: hidden;
+    }
+    .arch-layer::before {
+      content: "";
+      position: absolute;
+      inset: 0 auto 0 0;
+      width: 3px;
+      background: linear-gradient(180deg, rgba(60,230,214,.2), rgba(60,230,214,.9), rgba(245,196,80,.5));
+    }
+    .arch-name {
+      font-size: var(--text-xs);
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--color-primary);
+    }
+    .arch-title {
+      font-size: var(--text-lg);
+      color: var(--color-text);
+      font-weight: 700;
+    }
+    .arch-desc {
+      font-size: var(--text-sm);
+      color: var(--color-text-muted);
+      max-width: none;
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 18px;
+    }
+    .portfolio-card {
+      min-height: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+    .portfolio-card::before {
+      content: "";
+      position: absolute;
+      inset: auto -10% -35% auto;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(60,230,214,.14), transparent 65%);
+      pointer-events: none;
+    }
+    .card-topline {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+    .tag {
+      font-size: var(--text-xs);
+      text-transform: uppercase;
+      letter-spacing: .16em;
+      color: var(--color-primary);
+    }
+    .chip {
+      font-size: var(--text-xs);
+      color: var(--color-text-faint);
+      padding: 8px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.07);
+      background: rgba(255,255,255,.025);
+    }
+    .portfolio-card p { margin-bottom: 18px; }
+    .card-list {
+      list-style: none;
+      display: grid;
+      gap: 10px;
+      margin-top: 18px;
+    }
+    .card-list li {
+      padding: 12px 14px;
+      border-radius: 14px;
+      background: rgba(255,255,255,.03);
+      border: 1px solid rgba(255,255,255,.07);
+      color: var(--color-text);
+      font-size: var(--text-sm);
+    }
+
+    .ethics-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap: 18px;
+    }
+    .ethic-card p { margin-bottom: 16px; }
+    .ethic-points {
+      list-style: none;
+      display: grid;
+      gap: 10px;
+    }
+    .ethic-points li {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      color: var(--color-text-muted);
+      font-size: var(--text-sm);
+    }
+    .ethic-points li::before {
+      content: "";
+      flex: none;
+      width: 10px;
+      height: 10px;
+      margin-top: 7px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--color-primary), var(--color-gold));
+      box-shadow: 0 0 18px rgba(60,230,214,.35);
+    }
+
+    .closing {
+      padding-bottom: 120px;
+    }
+    .footer-card {
+      position: relative;
+      overflow: hidden;
+      padding: clamp(26px, 3vw, 40px);
+      background:
+        linear-gradient(135deg, rgba(60,230,214,.12), rgba(255,255,255,.03) 38%, rgba(245,196,80,.08)),
+        rgba(255,255,255,.03);
+    }
+    .footer-card::after {
+      content: "";
+      position: absolute;
+      right: -80px;
+      bottom: -80px;
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(245,196,80,.22), transparent 65%);
+      pointer-events: none;
+    }
+    .footer-kicker {
+      font-size: var(--text-xs);
+      text-transform: uppercase;
+      letter-spacing: .18em;
+      color: var(--color-primary);
+      margin-bottom: 12px;
+    }
+    .footer-title {
+      font-size: clamp(2rem, 1.2rem + 2vw, 4rem);
+      max-width: 12ch;
+      margin-bottom: 16px;
+    }
+    .footer-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+    }
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .ambient-grid {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+      background-size: 64px 64px;
+      mask-image: linear-gradient(180deg, rgba(0,0,0,.46), transparent 78%);
+      opacity: .16;
+    }
+
+    @media (max-width: 1100px) {
+      .hero-grid,
+      .moat-grid,
+      .doctrine-grid,
+      .ethics-grid {
+        grid-template-columns: 1fr;
+      }
+      .proof-strip,
+      .portfolio-grid {
+        grid-template-columns: repeat(2, minmax(0,1fr));
+      }
+      .doctrine-rail {
+        position: relative;
+        top: auto;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .topbar-inner {
+        flex-wrap: wrap;
+        padding: 14px 0;
+      }
+      .nav {
+        width: 100%;
+        justify-content: flex-start;
+        overflow-x: auto;
+        padding-bottom: 4px;
+      }
+      .hero {
+        padding-top: 52px;
+      }
+      .hero h1 {
+        max-width: 9ch;
+      }
+      .proof-strip,
+      .portfolio-grid,
+      .ethics-grid,
+      .moat-metrics {
+        grid-template-columns: 1fr;
+      }
+      .signal-grid {
+        grid-template-columns: 1fr;
+      }
+      .signal-card.large,
+      .signal-card.side {
+        grid-column: span 1;
+      }
+      .hero-panel {
+        min-height: auto;
+      }
+      .footer-title {
+        max-width: 100%;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+      }
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="topbar" aria-label="Primary">
+    <div class="topbar-inner">
+      <a class="brand" href="#hero" aria-label="Nirmata Holdings home">
+        <div class="brand-mark" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 64 64" fill="none" role="img" aria-label="ATOM mark">
+            <path d="M12 34C12 21.85 21.85 12 34 12h18v18C52 42.15 42.15 52 30 52H12V34Z" stroke="currentColor" stroke-width="3"/>
+            <path d="M18 46L46 18" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+            <circle cx="46" cy="18" r="6" fill="currentColor"/>
+          </svg>
+        </div>
+        <div class="brand-copy">
+          <span class="brand-kicker">Nirmata Holdings</span>
+          <span class="brand-title">ATOM Investor Experience</span>
+        </div>
+      </a>
+
+      <nav class="nav" aria-label="Section navigation">
+        <a href="#doctrine">Doctrine</a>
+        <a href="#moat">Moat</a>
+        <a href="#architecture">Architecture</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#ethics">Ethics</a>
+
+        <div class="nav-actions">
+          <button class="theme-toggle" data-theme-toggle aria-label="Switch theme">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+            </svg>
+          </button>
+          <a class="ghost-btn" href="#architecture">View Stack</a>
+          <a class="primary-btn" href="#close">Enter the Round</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="hero">
+      <div class="ambient-grid" aria-hidden="true"></div>
+      <div class="shell hero-grid">
+        <div class="hero-copy reveal">
+          <div class="eyebrow">
+            <span class="eyebrow-dot" aria-hidden="true"></span>
+            Investor portal · revenue nervous system · sovereign infrastructure
+          </div>
+
+          <h1>
+            We built the <span class="muted">operating system</span> commercial civilization runs on.
+          </h1>
+
+          <p class="hero-lead">
+            ATOM is not another AI assistant. It is the <strong>nervous system and spine</strong> between frontier intelligence and actual revenue, governance, evidence, and execution.
+          </p>
+
+          <div class="hero-actions">
+            <a class="primary-btn" href="#doctrine">Read the Doctrine</a>
+            <a class="ghost-btn" href="#moat">Inspect the Moat</a>
+          </div>
+
+          <div class="proof-strip" aria-label="Key proof points">
+            <article class="proof-card">
+              <div class="proof-label">Position</div>
+              <div class="proof-value">Revenue AI OS</div>
+              <div class="proof-note">Not a wrapper. Not a witness. The system that runs the work.</div>
+            </article>
+            <article class="proof-card">
+              <div class="proof-label">Core Architecture</div>
+              <div class="proof-value">One Brain</div>
+              <div class="proof-note">Single inference plane. Shared audit. Shared billing. Shared control.</div>
+            </article>
+            <article class="proof-card">
+              <div class="proof-label">Execution Model</div>
+              <div class="proof-value">Workers</div>
+              <div class="proof-note">Every worker has a job, evidence trail, whitelist, and SKU.</div>
+            </article>
+            <article class="proof-card">
+              <div class="proof-label">Economic Logic</div>
+              <div class="proof-value">Owned Margin</div>
+              <div class="proof-note">Infrastructure, orchestration, billing, and governance compound together.</div>
+            </article>
+          </div>
+        </div>
+
+        <aside class="hero-panel reveal" aria-label="Investor signal panel">
+          <div class="panel-topline">
+            <div class="panel-tag">Nirmata signal board</div>
+            <div class="status-pill">
+              <span class="eyebrow-dot" aria-hidden="true"></span>
+              Live thesis
+            </div>
+          </div>
+
+          <div class="signal-grid">
+            <article class="signal-card large">
+              <h3>Convergence window</h3>
+              <p>The category is opening at the exact intersection of autonomous agents, compliance enforcement, owned compute, and enterprise need.</p>
+              <div class="dial" aria-hidden="true">
+                <div class="dial-center">
+                  <strong>87%</strong>
+                  <span>Window open</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="signal-card side">
+              <h3>Signal stack</h3>
+              <div class="mini-metrics">
+                <div class="mini-metric"><span>Macro</span><strong>93</strong></div>
+                <div class="mini-metric"><span>Stack readiness</span><strong>95</strong></div>
+                <div class="mini-metric"><span>Buyer readiness</span><strong>88</strong></div>
+                <div class="mini-metric"><span>Capital</span><strong>81</strong></div>
+                <div class="mini-metric"><span>Competitive gap</span><strong>78</strong></div>
+              </div>
+            </article>
+
+            <article class="signal-card">
+              <h3>The frame</h3>
+              <p>Nirmata is one engine running multiple games on the same board. ATOM is the move. Antimatter is the substrate. HumanOS and PhysioPS extend the same doctrine into human performance and care.</p>
+            </article>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="doctrine">
+      <div class="shell">
+        <div class="section-header reveal">
+          <div class="section-kicker">Doctrine</div>
+          <h2 class="section-title">The doctrine is the product language.</h2>
+          <p class="section-sub">
+            The story only works if it tells the truth: not “AI tools,” but a governed operating layer that turns intelligence into execution, evidence, and owned-margin outcomes.
+          </p>
+        </div>
+
+        <div class="doctrine-grid">
+          <aside class="doctrine-rail reveal">
+            <div class="rail-label">Chapters</div>
+            <ul class="rail-list">
+              <li><a href="#d1">Nervous system</a></li>
+              <li><a href="#d2">The rep, not the observer</a></li>
+              <li><a href="#d3">The single inference plane</a></li>
+              <li><a href="#d4">Evidence before action</a></li>
+              <li><a href="#d5">Scarcity, not permission</a></li>
+            </ul>
+          </aside>
+
+          <div class="manifesto-stack">
+            <article class="manifesto-card reveal" id="d1">
+              <div class="manifesto-index">01</div>
+              <h3>The nervous system and spine</h3>
+              <p>The market is crowded with brains. ATOM occupies the more durable layer: the system that routes action, memory, evidence, permissions, escalation, and value capture.</p>
+              <div class="quote">“While GPT, Claude, and Grok are the brains — ATOM is the nervous system and spine.”</div>
+              <div class="manifesto-meta">
+                <span class="meta-chip">Positioning moat</span>
+                <span class="meta-chip">Architectural truth</span>
+                <span class="meta-chip">Not feature language</span>
+              </div>
+            </article>
+
+            <article class="manifesto-card reveal" id="d2">
+              <div class="manifesto-index">02</div>
+              <h3>Not an observer. The actor.</h3>
+              <p>Most revenue software watches work, summarizes work, or annotates work. ATOM is built to run the work itself through governed workers, browser execution, routing rules, and monetized actions.</p>
+              <div class="quote">“They observe deals. We run them. They sit on top of the rep. ATOM is the rep.”</div>
+              <div class="manifesto-meta">
+                <span class="meta-chip">Revenue-native execution</span>
+                <span class="meta-chip">Category creation</span>
+                <span class="meta-chip">Execution surface</span>
+              </div>
+            </article>
+
+            <article class="manifesto-card reveal" id="d3">
+              <div class="manifesto-index">03</div>
+              <h3>One spine. Infinite workers.</h3>
+              <p>Every worker calls into the same Brain, the same audit chain, the same meter, and the same controls. That makes the system operationally elegant and economically compounding.</p>
+              <div class="quote">“ATOM Brain is the single inference plane every worker calls into.”</div>
+              <div class="manifesto-meta">
+                <span class="meta-chip">Shared billing</span>
+                <span class="meta-chip">Shared RBAC</span>
+                <span class="meta-chip">Shared audit log</span>
+              </div>
+            </article>
+
+            <article class="manifesto-card reveal" id="d4">
+              <div class="manifesto-index">04</div>
+              <h3>Evidence before action</h3>
+              <p>The deepest trust layer is not persuasive copy. It is proving that high-risk actions pass through policy gates, consent logic, counsel-aware framing, and tamper-evident records before execution happens.</p>
+              <div class="quote">“We never say ‘you are compliant.’ We say: evidence mapped to controls, counsel review where applicable.”</div>
+              <div class="manifesto-meta">
+                <span class="meta-chip">Evidence OS</span>
+                <span class="meta-chip">13-point gate</span>
+                <span class="meta-chip">Regulated-enterprise ready</span>
+              </div>
+            </article>
+
+            <article class="manifesto-card reveal" id="d5">
+              <div class="manifesto-index">05</div>
+              <h3>Scarcity as posture</h3>
+              <p>This is not a deck asking the market to imagine a future. It is a platform asserting that the window is open now, the demand is already there, and the real constraint is fuel to scale.</p>
+              <div class="quote">“We don’t pitch potential. We pitch scarcity. The demand is interstellar. The constraint is capital.”</div>
+              <div class="manifesto-meta">
+                <span class="meta-chip">VC framing</span>
+                <span class="meta-chip">FOMO without fluff</span>
+                <span class="meta-chip">Control of narrative</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="moat">
+      <div class="shell">
+        <div class="section-header reveal">
+          <div class="section-kicker">Moat</div>
+          <h2 class="section-title">The moat is not the model. It is the stack economics.</h2>
+          <p class="section-sub">
+            The defensibility comes from sovereign inference, governed workers, auditability, revenue-native browser execution, and infrastructure economics competitors do not own.
+          </p>
+        </div>
+
+        <div class="moat-grid">
+          <article class="stack-card reveal">
+            <h3>Infrastructure edge</h3>
+            <p>The core investor point is simple: tenants pay somebody else’s margins forever. Nirmata’s posture is different because the compute layer, routing, evidence chain, and billing logic are all part of the same machine.</p>
+
+            <div class="moat-metrics">
+              <div class="moat-metric">
+                <strong>4,400+</strong>
+                <span>Edge-node nervous system narrative</span>
+              </div>
+              <div class="moat-metric">
+                <strong>86%</strong>
+                <span>Below hyperscaler cost framing</span>
+              </div>
+              <div class="moat-metric">
+                <strong>30–100x</strong>
+                <span>Illustrative routed token cost displacement</span>
+              </div>
+              <div class="moat-metric">
+                <strong>&lt;300ms</strong>
+                <span>First-token latency proof language</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="quote-card reveal">
+            <h3>The investor sentence</h3>
+            <p class="quote">“Akamai + Blackwell isn’t a partnership. It’s a 4,400-node nervous system running at 86% of hyperscaler cost.”</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="architecture">
+      <div class="shell">
+        <div class="section-header reveal">
+          <div class="section-kicker">Architecture</div>
+          <h2 class="section-title">The system is built like a biological control stack.</h2>
+          <p class="section-sub">
+            The storytelling lands harder when the architecture is visible: surface, workers, browser, evidence, red-team layer, Brain, and the infrastructure substrate under all of it.
+          </p>
+        </div>
+
+        <div class="arch-shell">
+          <div class="arch-layer reveal">
+            <div class="arch-name">Surface</div>
+            <div class="arch-title">ATOM Sales OS / Workspace shell</div>
+            <div class="arch-desc">The operator layer where the story becomes software: shared UI, RBAC, billing, approvals, account state, and command flow.</div>
+          </div>
+
+          <div class="arch-layer reveal">
+            <div class="arch-name">Workers</div>
+            <div class="arch-title">7 families · 50+ worker thesis</div>
+            <div class="arch-desc">SELL, BUILD, SUPPORT, OPS, TRUST, FINANCE, and vertical families. Every worker is a persona, job definition, whitelist, escalation rule, evidence source, and SKU.</div>
+          </div>
+
+          <div class="arch-layer reveal">
+            <div class="arch-name">Execution</div>
+            <div class="arch-title">ATOM Browser as the revenue execution surface</div>
+            <div class="arch-desc">Not passive browsing. Active qualification, research, drafting, invocation, cost accounting, approvals, and evidence logging before risky actions touch the customer.</div>
+          </div>
+
+          <div class="arch-layer reveal">
+            <div class="arch-name">Trust layer</div>
+            <div class="arch-title">Evidence OS + 13-point pre-action gate</div>
+            <div class="arch-desc">Server-to-server policy checks, consent, quiet hours, state logic, audit chain, and tamper-evident proof designed for counsel, regulators, and cross-examination.</div>
+          </div>
+
+          <div class="arch-layer reveal">
+            <div class="arch-name">Intelligence</div>
+            <div class="arch-title">ATOM Brain · the single inference plane</div>
+            <div class="arch-desc">One route for inference, one log, one meter, one control posture. The economic elegance of the system comes from everything calling through one spine.</div>
+          </div>
+
+          <div class="arch-layer reveal">
+            <div class="arch-name">Substrate</div>
+            <div class="arch-title">Akamai + Blackwell grid</div>
+            <div class="arch-desc">The owned economics layer: edge distribution, model hosting, latency, cost control, and strategic leverage beneath every product family.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="portfolio">
+      <div class="shell">
+        <div class="section-header reveal">
+          <div class="section-kicker">Portfolio engine</div>
+          <h2 class="section-title">One doctrine. Multiple wedges. Shared compounding.</h2>
+          <p class="section-sub">
+            The holding-company story works best when every company looks like an expression of the same operating philosophy rather than disconnected experiments.
+          </p>
+        </div>
+
+        <div class="portfolio-grid">
+          <article class="portfolio-card reveal">
+            <div class="card-topline">
+              <span class="tag">Revenue</span>
+              <span class="chip">ATOM</span>
+            </div>
+            <h3>The move</h3>
+            <p>ATOM is the clearest proof point because revenue is measurable, legible, and commercially urgent. It is the first app that demonstrates the larger OS thesis.</p>
+            <ul class="card-list">
+              <li>Revenue AI OS</li>
+              <li>Governed worker hierarchy</li>
+              <li>Execution-native browser</li>
+              <li>Evidence on every action</li>
+            </ul>
+          </article>
+
+          <article class="portfolio-card reveal">
+            <div class="card-topline">
+              <span class="tag">Enterprise substrate</span>
+              <span class="chip">AntimatterAI</span>
+            </div>
+            <h3>The parallel build</h3>
+            <p>The enterprise layer extends the same thesis outward: the governed library of executable skills becomes the real asset, not any single workflow or wrapper.</p>
+            <ul class="card-list">
+              <li>Enterprise intelligence layer</li>
+              <li>Skill-library moat</li>
+              <li>Cross-domain orchestration</li>
+              <li>Private deployment posture</li>
+            </ul>
+          </article>
+
+          <article class="portfolio-card reveal">
+            <div class="card-topline">
+              <span class="tag">Human edge</span>
+              <span class="chip">HumanOS / PhysioPS</span>
+            </div>
+            <h3>The long position</h3>
+            <p>The same doctrine moves into biology and performance: sensing, inference, prevention, and intervention built around measurable human outcomes rather than dashboard theater.</p>
+            <ul class="card-list">
+              <li>Predictive human performance</li>
+              <li>Clinical-grade feedback loop</li>
+              <li>Veteran / athlete / elite use cases</li>
+              <li>OS logic applied to care</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="ethics">
+      <div class="shell">
+        <div class="section-header reveal">
+          <div class="section-kicker">Ethics and philosophy</div>
+          <h2 class="section-title">The philosophical weapons only work if the ethics are real.</h2>
+          <p class="section-sub">
+            The most compelling version of the Nirmata story is not domination theater. It is a disciplined claim that autonomous systems should be governable, auditable, ownable, and aligned with the institutions they enter.
+          </p>
+        </div>
+
+        <div class="ethics-grid">
+          <article class="ethic-card reveal">
+            <h3>The operating ethic</h3>
+            <p>Governance is not a patch after deployment. It is native to the architecture: evidence before action, controls before scale, and traceability before persuasion.</p>
+            <ul class="ethic-points">
+              <li>Do not overclaim compliance; prove mapped controls and review pathways.</li>
+              <li>Keep customers’ IP and data ownership intact rather than training the world on their operations.</li>
+              <li>Treat audit trails and consent records as first-class product surfaces.</li>
+              <li>Use governed workers instead of unconstrained agents wherever real-world risk exists.</li>
+            </ul>
+          </article>
+
+          <article class="ethic-card reveal">
+            <h3>The civilizational thesis</h3>
+            <p>The deeper story is that intelligence concentration creates structural dependence. Nirmata’s answer is to build alternative operating infrastructure that gives enterprises execution power without surrendering ownership of the substrate.</p>
+            <ul class="ethic-points">
+              <li>Brains will commoditize faster than execution systems.</li>
+              <li>Owned infrastructure changes margin, control, and strategic time horizon.</li>
+              <li>The durable asset is the executable doctrine encoded into workers and systems.</li>
+              <li>Ethics becomes practical only when it is encoded in gates, logs, roles, and permissions.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section closing" id="close">
+      <div class="shell">
+        <div class="footer-card reveal">
+          <div class="footer-kicker">Investor close</div>
+          <h2 class="footer-title">The round is not about possibility. It is about timing.</h2>
+          <p>
+            The architecture exists. The doctrine is coherent. The moat is structural. The ethics are encoded. The question for capital is not whether this category emerges, but who got into the system early enough to matter.
+          </p>
+          <div class="footer-actions">
+            <a class="primary-btn" href="#hero">Re-enter the portal</a>
+            <a class="ghost-btn" href="#doctrine">Review doctrine</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    (function () {
+      const root = document.documentElement;
+      const toggle = document.querySelector("[data-theme-toggle]");
+      let mode = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      root.setAttribute("data-theme", mode);
+
+      const setIcon = () => {
+        if (!toggle) return;
+        toggle.setAttribute("aria-label", "Switch to " + (mode === "dark" ? "light" : "dark") + " mode");
+        toggle.innerHTML = mode === "dark"
+          ? '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3A7 7 0 0 0 21 12.79z"/></svg>'
+          : '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>';
+      };
+
+      setIcon();
+      toggle?.addEventListener("click", () => {
+        mode = mode === "dark" ? "light" : "dark";
+        root.setAttribute("data-theme", mode);
+        setIcon();
+      });
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) entry.target.classList.add("is-visible");
+        });
+      }, { threshold: 0.12 });
+
+      document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+    })();
+  </script>
+</body>
+</html>
